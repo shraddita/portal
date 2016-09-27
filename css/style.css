@@ -1,18 +1,28 @@
 
+body{
+	/* removes margins and paddings from entire page */
+	margin: 0;
+	padding: 0;
+}
+
 .banner {
-   width: 100%;
-   margin: 0;
-   padding: 0;
-   background-color:#5F9EA0;
-   top: 0;
-   left: 0;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	background-color: #5F9EA0;
+	top: 0;
+	left: 0;
+	/* prevents floating child div from disappearing */
+	overflow: hidden;
 }
 
 .title-color {
-	color: #000000;
+	color: #FFFFFF;
+	font-size: 200%;
+	
 }
 
 .align-right {
-	float:right; 
+	float: right;
 }
 
