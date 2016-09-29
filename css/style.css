@@ -27,8 +27,10 @@ body{
 }
 
 .map-container {
-	background-size: cover;
-	/* will need to delete these when real map is inserted */
-	overflow-x:hidden;
-    overflow-y:hidden;
+	position: fixed; 
+    top: 0; 
+    left: 0;
+	min-height: 100%;
+	min-width: 100%;
+
 }
