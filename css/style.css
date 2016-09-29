@@ -26,3 +26,9 @@ body{
 	float: right;
 }
 
+.map-container {
+	background-size: cover;
+	/* will need to delete these when real map is inserted */
+	overflow-x:hidden;
+    overflow-y:hidden;
+}
