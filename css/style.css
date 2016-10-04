@@ -2,18 +2,26 @@
 body{
 	/* removes margins and paddings from entire page */
 	margin: 0;
-	padding: 0;
+	border: 0;
 }
 
 .banner {
-	width: 100%;
 	margin: 0;
 	padding: 0;
+	width: 100%;
 	background-color: #5F9EA0;
-	top: 0;
-	left: 0;
 	/* prevents floating child div from disappearing */
 	overflow: hidden;
+}
+
+#top-banner {
+	position: fixed;
+	top: 0;
+}
+
+#bttm-banner {
+	position: fixed;
+	bottom: 0;
 }
 
 .title-color {
@@ -22,6 +30,14 @@ body{
 	
 }
 
+.footer-color {
+	color: #000000;
+	font-size: 150%;
+}
+
+.pad-banner {
+	padding: 5px;
+}
 .align-right {
 	float: right;
 }
