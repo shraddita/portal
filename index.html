@@ -9,13 +9,16 @@
   <meta name="author" content="NYC GIS Group">
   
   <title>NYC Census Explorer</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.1/dist/leaflet.css" />
   <link rel="stylesheet" href="css/style.css">
+  
+  <script src="https://unpkg.com/leaflet@1.0.1/dist/leaflet.js"></script>
   
 </head>
 
 <body>
   <div>
-	<img src="images/map-01.png" class="map-container" alt="">
+	<div id="map-container"></div>
 	<div class="title-color banner" id="top-banner">
 	  <div class="pad-banner clearfix"> 
 	    <span> NYC Census Explorer </span>
@@ -39,6 +42,10 @@
 	</div>
 	
   </div>
+  <script>
+	var mymap = L.map('map-container', { zoomControl:false }).setView([40.7153604,-73.9837349], 10);
+	L.tileLayer('http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png', {attribution: 'Positron'}).addTo(mymap);
+  </script>
 </body>
 
 </html>
