@@ -1,4 +1,7 @@
 
+* {
+	box-sizing: border-box;
+}
 body{
 	/* removes margins and paddings from entire page */
 	margin: 0;
@@ -9,12 +12,7 @@ body{
 	margin: 0;
 	padding: 0;
 	width: 100%;
-	background-color: #5F9EA0;
-	opacity: 0.5;
-}
-
-div span {
-	opacity: 1;
+	background-color: rgba(95,158,160,0.6);
 }
 
 #top-banner {
@@ -28,7 +26,7 @@ div span {
 }
 
 .title-color {
-	color: #000000;
+	color: #ffffff;
 	font-size: 200%;
 	
 }
@@ -72,14 +70,6 @@ li, li a {
 	padding: 4px 10px;
     text-decoration: none;
 }
-
-/*li a {
-    display: inline-block;
-    color: white;
-    text-align: center;
-	padding: 4px 10px;
-    text-decoration: none;
-}*/
 
 li a:hover, li a:active {
     background-color: #bfd8d9;
