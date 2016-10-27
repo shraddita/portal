@@ -6,6 +6,7 @@ body{
 	/* removes margins and paddings from entire page */
 	margin: 0;
 	border: 0;
+	font-family: 'Droid Sans', sans-serif;
 }
 
 .banner {
