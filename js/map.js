@@ -6,6 +6,8 @@ L.tileLayer('https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_all/{z}/{x
 
 var allLayers = 'https://nycem.carto.com/u/imorey/api/v2/viz/217510a8-447a-11e6-81f4-0e05a8b3e3d7/viz.json';
 
+// declares nTabID as a global variable
+var nTabID = "";
 
 cartodb.createLayer(map, allLayers, {https: true})
 	.addTo(map)
@@ -16,8 +18,26 @@ cartodb.createLayer(map, allLayers, {https: true})
 		nTabArea = layer.getSubLayer(1); 
 		//nTabArea.hide();  //hide neighborhood polygons
 		//nTabArea.on('featureClick', processNeighborhood);
-	})
-	.on('error', function() {
+		
+		nTabArea.on('featureClick', function(e, latlng, pos, data){
+		  nTabID = data.neighborho;
+		  return nTabID;
+	    });
+	}).on('error', function() {
     //log the error
 	alert("some error occurred: " + err);
     });
+	
+function getNeighborho(){
+	if (nTabID == "") {
+		alert("Select an area first!");
+	} else {console.log(nTabID)}
+};
+
+
+
+ var subLayerOptions = {
+      //sql: "SELECT * FROM example_cartojs_1 where pop_other::float > 1000000",
+      cartocss: "cscl_neighborhood_20141110{polygon-fill: #109DCD;}"
+}
+
