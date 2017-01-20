@@ -21,6 +21,7 @@ cartodb.createLayer(map, allLayers, {https: true})
 		
 		nTabArea.on('featureClick', function(e, latlng, pos, data){
 		  nTabID = data.neighborho;
+		  nTabArea.set(subLayerOptions);
 		  return nTabID;
 	    });
 	}).on('error', function() {
@@ -38,6 +39,6 @@ function getNeighborho(){
 
  var subLayerOptions = {
       //sql: "SELECT * FROM example_cartojs_1 where pop_other::float > 1000000",
-      cartocss: "cscl_neighborhood_20141110{polygon-fill: #109DCD;}"
+	  cartocss: "#cscl_neighborhood_20141110{polygon-fill: #109DCD;}"
 }
 
